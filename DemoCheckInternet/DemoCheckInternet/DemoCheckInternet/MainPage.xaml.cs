@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Plugin.Connectivity;
 using Xamarin.Forms;
 
 namespace DemoCheckInternet
@@ -13,5 +10,10 @@ namespace DemoCheckInternet
 		{
 			InitializeComponent();
 		}
-	}
+
+	    public void VerifyInternet(object sender, EventArgs e)
+	    {
+	        Status.Text = CrossConnectivity.Current.IsConnected ? "Connected" : "Disconnected";
+	    }
+    }
 }

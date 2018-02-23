@@ -4,8 +4,13 @@
              xmlns:local="clr-namespace:DemoCheckInternet"
              x:Class="DemoCheckInternet.MainPage">
 
-	<Label Text="Welcome to Xamarin.Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <StackLayout VerticalOptions="Center" 
+                 HorizontalOptions="Center">
+        
+        <Label x:Name="Status"
+               FontSize="20"/>
+        
+        <Button Text="Verify" Clicked="VerifyInternet"/>
 
+    </StackLayout>
 </ContentPage>
